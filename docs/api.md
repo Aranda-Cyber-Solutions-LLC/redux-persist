@@ -63,6 +63,7 @@ The Persistor is a redux store unto itself, plus
   debug?: boolean, // true -> verbose logs
   stateReconciler?: false | StateReconciler, // false -> do not automatically reconcile state
   serialize?: boolean, // false -> do not call JSON.parse & stringify when setting & getting from storage
+  combineReducers?: Function, // the function to be used to combineReducers (defaults to combineReducers from redux) 
 }
 ```
 

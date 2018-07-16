@@ -21,5 +21,9 @@ export default function persistCombineReducers(
     config.stateReconciler === undefined
       ? autoMergeLevel2
       : config.stateReconciler
-  return persistReducer(config, combineReducers(reducers))
+  config.combineReducers =
+    config.combineReducers === undefined
+      ? combineReducers
+      : config.combineReducers
+  return persistReducer(config, config.combineReducers(reducers))
 }

@@ -25,6 +25,7 @@ export type PersistConfig = {
   debug?: boolean,
   serialize?: boolean,
   timeout?: number,
+  combineReducers?: Function,
 }
 
 export type PersistorOptions = {
